@@ -103,91 +103,33 @@ export default function HomePage() {
 
   return (
     <main className={styles.container}>
-      <div className={`${styles.cardWrapper} ${flipped ? styles.flipped : ""}`}>
-        <div className={styles.cardContainer}>
-          {/* FRONT SIDE */}
-          <div className={`${styles.cardFace} ${styles.cardFront}`}>
-            <div className={styles.scrollContainer}>
-              {/* Front card content */}
-              <h1>Card Front</h1>
-              <div className={styles.profileSection}>
-                {/* Profile content */}
-              </div>
-              
-              <div className={styles.articles}>
-                <h2>Featured Articles</h2>
-                {articles.filter(a => a.isFeatured).map((article, idx) => (
-                  <div key={idx} className={styles.articleItem}>
-                    <span>{article.title}</span>
-                    <a
-                      href={article.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className={styles.readButton}>Read</button>
-                    </a>
-                  </div>
-                ))}
-              </div>
-              
-              <button 
-                className={styles.flipButton}
-                onClick={() => setFlipped(true)}
-              >
-                See more content
-              </button>
-            </div>
+    <div className={`${styles.cardWrapper} ${flipped ? styles.flipped : ""}`}>
+      <div className={styles.cardContainer}>
+        <div className={`${styles.cardFace} ${styles.cardFront}`}>
+          <div className={styles.scrollContainer}>
+            <h1>Front Side</h1>
+            <p>Lots of content...</p>
+            <p>More content...</p>
+            <p>Even more content to make it scrollable...</p>
+            {[...Array(20)].map((_, i) => (
+              <p key={i}>Line {i + 1}</p>
+            ))}
+            <button onClick={() => setFlipped(true)}>Flip to Back</button>
           </div>
-          
-          {/* BACK SIDE */}
-          <div className={`${styles.cardFace} ${styles.cardBack}`}>
-            <div className={styles.scrollContainer}>
-              {/* Back card content */}
-              <button 
-                className={styles.flipButton}
-                onClick={() => setFlipped(false)}
-              >
-                Back to profile
-              </button>
-              
-              <div className={styles.articles}>
-                <h2>More Articles</h2>
-                {articles.map((article, idx) => (
-                  <div key={idx} className={styles.articleItem}>
-                    <span>{article.title}</span>
-                    <a
-                      href={article.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className={styles.readButton}>Read</button>
-                    </a>
-                  </div>
-                ))}
-              </div>
-              
-              <div className={styles.articles}>
-                <h2>Videos</h2>
-                {videos.map((video, idx) => (
-                  <div key={idx} className={styles.articleItem}>
-                    <span>{video.title}</span>
-                    <a
-                      href={video.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className={styles.readButton}>Watch</button>
-                    </a>
-                  </div>
-                ))}
-              </div>
-              
-              <Survey />
-              <Connect />
-            </div>
+        </div>
+
+        <div className={`${styles.cardFace} ${styles.cardBack}`}>
+          <div className={styles.scrollContainer}>
+            <h1>Back Side</h1>
+            <p>This side scrolls too!</p>
+            {[...Array(30)].map((_, i) => (
+              <p key={i}>Back Line {i + 1}</p>
+            ))}
+            <button onClick={() => setFlipped(false)}>Flip to Front</button>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
   );
 }
