@@ -103,29 +103,29 @@ export default function HomePage() {
 
   return (
     <main className={styles.container}>
-    <div className={`${styles.cardWrapper} ${flipped ? styles.flipped : ""}`}>
-      <div className={styles.cardContainer}>
-        <div className={`${styles.cardFace} ${styles.cardFront}`}>
-          <div className={styles.scrollContainer}>
-            <h1>Front Side</h1>
-            {[...Array(50)].map((_, i) => (
-              <p key={i}>Front Line {i + 1}</p>
-            ))}
-            <button onClick={() => setFlipped(true)}>Flip to Back</button>
+      <div className={`${styles.cardWrapper} ${flipped ? styles.flipped : ""}`}>
+        <div className={styles.cardContainer}>
+          <div className={`${styles.cardFace} ${styles.cardFront}`}>
+            <div className={styles.scrollContainer}>
+              <h1>Front Side</h1>
+              {[...Array(30)].map((_, i) => (
+                <p key={i}>Front Line {i + 1}</p>
+              ))}
+              <button onClick={() => setFlipped(true)}>Flip to Back</button>
+            </div>
           </div>
-        </div>
 
-        <div className={`${styles.cardFace} ${styles.cardBack}`}>
-          <div className={styles.scrollContainer}>
-            <h1>Back Side</h1>
-            {[...Array(50)].map((_, i) => (
-              <p key={i}>Back Line {i + 1}</p>
-            ))}
-            <button onClick={() => setFlipped(false)}>Flip to Front</button>
+          <div className={`${styles.cardFace} ${styles.cardBack}`}>
+            <div className={styles.scrollContainer}>
+              <h1>Back Side</h1>
+              {[...Array(50)].map((_, i) => (
+                <p key={i}>Back Line {i + 1}</p>
+              ))}
+              <button onClick={() => setFlipped(false)}>Flip to Front</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
   );
 }
