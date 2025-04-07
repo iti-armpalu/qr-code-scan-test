@@ -111,7 +111,7 @@ export default function HomePage() {
             <p>Lots of content...</p>
             <p>More content...</p>
             <p>Even more content to make it scrollable...</p>
-            {[...Array(20)].map((_, i) => (
+            {[...Array(50)].map((_, i) => (
               <p key={i}>Line {i + 1}</p>
             ))}
             <button onClick={() => setFlipped(true)}>Flip to Back</button>
@@ -122,7 +122,7 @@ export default function HomePage() {
           <div className={styles.scrollContainer}>
             <h1>Back Side</h1>
             <p>This side scrolls too!</p>
-            {[...Array(30)].map((_, i) => (
+            {[...Array(50)].map((_, i) => (
               <p key={i}>Back Line {i + 1}</p>
             ))}
             <button onClick={() => setFlipped(false)}>Flip to Front</button>
