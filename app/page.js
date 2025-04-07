@@ -108,11 +108,8 @@ export default function HomePage() {
         <div className={`${styles.cardFace} ${styles.cardFront}`}>
           <div className={styles.scrollContainer}>
             <h1>Front Side</h1>
-            <p>Lots of content...</p>
-            <p>More content...</p>
-            <p>Even more content to make it scrollable...</p>
             {[...Array(50)].map((_, i) => (
-              <p key={i}>Line {i + 1}</p>
+              <p key={i}>Front Line {i + 1}</p>
             ))}
             <button onClick={() => setFlipped(true)}>Flip to Back</button>
           </div>
@@ -121,7 +118,6 @@ export default function HomePage() {
         <div className={`${styles.cardFace} ${styles.cardBack}`}>
           <div className={styles.scrollContainer}>
             <h1>Back Side</h1>
-            <p>This side scrolls too!</p>
             {[...Array(50)].map((_, i) => (
               <p key={i}>Back Line {i + 1}</p>
             ))}
