@@ -52,15 +52,10 @@
 }
 
 .scrollContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   padding: 2rem;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  height: 100%;
+  flex: 1;
 }
 
 /* Your existing article, profile, and other styles */
