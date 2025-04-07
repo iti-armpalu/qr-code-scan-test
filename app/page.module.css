@@ -35,6 +35,8 @@
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   background: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .cardFront {
@@ -56,4 +58,6 @@
   padding: 2rem;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
+  transform: translateZ(0);
+  touch-action: auto;
 }
