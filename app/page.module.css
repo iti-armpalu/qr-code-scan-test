@@ -43,10 +43,12 @@
 
 .cardFront {
   z-index: 1;
+  background-color: lightblue; /* TEMP */
 }
 
 .cardBack {
   transform: rotateY(180deg);
+  background-color: lightpink; /* TEMP */
 }
 
 .scrollContainer {
